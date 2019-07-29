@@ -99,17 +99,18 @@
 
 
 
-  <meta name="keywords" content="wjup|wjup的博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="404 NOT FOUND">
-<meta property="og:url" content="https://wjup.com/404.html">
+  <meta name="description" content="问题的根源都来自现实生活中。就在周末无聊从网上爬数据插入到数据库时，发现有些数据是重复的，而且重复了五六次。肯定不能忍。于是查询资料，sql骚操作一番，最后完美解决。">
+<meta name="keywords" content="数据处理">
+<meta property="og:type" content="article">
+<meta property="og:title" content="mysql删除多余重复数据只保留一条数据">
+<meta property="og:url" content="https://wjup.com/2019/07/29/mysql删除多余重复数据只保留一条数据/index.html">
 <meta property="og:site_name" content="WJUP">
+<meta property="og:description" content="问题的根源都来自现实生活中。就在周末无聊从网上爬数据插入到数据库时，发现有些数据是重复的，而且重复了五六次。肯定不能忍。于是查询资料，sql骚操作一番，最后完美解决。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://wjup.com/images/404.jpg">
-<meta property="og:updated_time" content="2019-07-14T03:05:42.416Z">
+<meta property="og:updated_time" content="2019-07-29T03:28:45.469Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="404 NOT FOUND">
-<meta name="twitter:image" content="https://wjup.com/images/404.jpg">
+<meta name="twitter:title" content="mysql删除多余重复数据只保留一条数据">
+<meta name="twitter:description" content="问题的根源都来自现实生活中。就在周末无聊从网上爬数据插入到数据库时，发现有些数据是重复的，而且重复了五六次。肯定不能忍。于是查询资料，sql骚操作一番，最后完美解决。">
 
 
 
@@ -117,7 +118,7 @@
 
   
   
-  <link rel="canonical" href="https://wjup.com/404">
+  <link rel="canonical" href="https://wjup.com/2019/07/29/mysql删除多余重复数据只保留一条数据/">
 
 
 
@@ -127,7 +128,7 @@
   };
 </script>
 
-  <title>404 NOT FOUND | WJUP</title>
+  <title>mysql删除多余重复数据只保留一条数据 | WJUP</title>
   
 
 
@@ -396,83 +397,374 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://wjup.com/2019/07/29/mysql删除多余重复数据只保留一条数据/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="wjup">
+      <meta itemprop="description" content="路漫漫其修远兮，吾将上下而求索">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="WJUP">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-<h2 class="post-title" itemprop="name headline">404 NOT FOUND
-
-</h2>
-
-<div class="post-meta">
-  
-  
-
-
-
-</div>
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <div align="center">
-    <img src="/images/404.jpg">
-</div>
+          <h2 class="post-title" itemprop="name headline">mysql删除多余重复数据只保留一条数据
+
+              
+            
+          </h2>
         
-      </div>
+
+        <div class="post-meta">
+		
+		
+
+          
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-07-29 12:36:49 / 修改时间：11:28:45" itemprop="dateCreated datePublished" datetime="2019-07-29T12:36:49+08:00">2019-07-29</time>
+            </span>
+          
+
+          
+            
+
+            
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/编程/" itemprop="url" rel="index"><span itemprop="name">编程</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/编程/mysql/" itemprop="url" rel="index"><span itemprop="name">mysql</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          <br>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <div class="note success no-icon">
+            <p>问题的根源都来自现实生活中。<br>就在周末无聊从网上爬数据插入到数据库时，发现有些数据是重复的，而且重复了五六次。肯定不能忍。于是查询资料，sql骚操作一番，最后完美解决。</p>
+          </div>
+<a id="more"></a>
+
+<p>循序渐进，逐步开始</p>
+<h2 id="先展示下示例user表数据"><a href="#先展示下示例user表数据" class="headerlink" title="先展示下示例user表数据"></a>先展示下示例user表数据</h2><table>
+<thead>
+<tr>
+<th align="center">id</th>
+<th align="center">username</th>
+<th align="center">password</th>
+<th align="center">ctime</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1</td>
+<td align="center">tom</td>
+<td align="center">123456</td>
+<td align="center">2019-07-29</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center">jack</td>
+<td align="center">123456</td>
+<td align="center">2019-07-21</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="center">tom</td>
+<td align="center">123456</td>
+<td align="center">2019-07-29</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="center">admin</td>
+<td align="center">admin</td>
+<td align="center">2019-01-01</td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td align="center">tom</td>
+<td align="center">123456</td>
+<td align="center">2019-07-29</td>
+</tr>
+<tr>
+<td align="center">6</td>
+<td align="center">jack</td>
+<td align="center">123456</td>
+<td align="center">2019-07-21</td>
+</tr>
+</tbody></table>
+<h2 id="先把数据进行分组，把有重复数据的组筛选出来"><a href="#先把数据进行分组，把有重复数据的组筛选出来" class="headerlink" title="先把数据进行分组，把有重复数据的组筛选出来"></a>先把数据进行分组，把有重复数据的组筛选出来</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> username,<span class="keyword">count</span>(<span class="number">1</span>) <span class="keyword">from</span> <span class="keyword">user</span> <span class="keyword">GROUP</span> <span class="keyword">BY</span> username <span class="keyword">HAVING</span> <span class="keyword">count</span>(<span class="number">1</span>) &gt; <span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th align="center">username</th>
+<th align="center">count(1)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">tom</td>
+<td align="center">3</td>
+</tr>
+<tr>
+<td align="center">jack</td>
+<td align="center">2</td>
+</tr>
+</tbody></table>
+<h2 id="查询出全部重复数据"><a href="#查询出全部重复数据" class="headerlink" title="查询出全部重复数据"></a>查询出全部重复数据</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> <span class="keyword">user</span> <span class="keyword">where</span> username <span class="keyword">in</span> (<span class="keyword">select</span> username <span class="keyword">from</span> <span class="keyword">user</span> <span class="keyword">group</span> <span class="keyword">by</span> username <span class="keyword">having</span> <span class="keyword">count</span>(<span class="number">1</span>)&gt;<span class="number">1</span> )  <span class="keyword">order</span> <span class="keyword">by</span> username</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th align="center">id</th>
+<th align="center">username</th>
+<th align="center">password</th>
+<th align="center">ctime</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1</td>
+<td align="center">tom</td>
+<td align="center">123456</td>
+<td align="center">2019-07-29</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="center">tom</td>
+<td align="center">123456</td>
+<td align="center">2019-07-29</td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td align="center">tom</td>
+<td align="center">123456</td>
+<td align="center">2019-07-29</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center">jack</td>
+<td align="center">123456</td>
+<td align="center">2019-07-21</td>
+</tr>
+<tr>
+<td align="center">6</td>
+<td align="center">jack</td>
+<td align="center">123456</td>
+<td align="center">2019-07-21</td>
+</tr>
+</tbody></table>
+<h2 id="删除全部重复数据"><a href="#删除全部重复数据" class="headerlink" title="删除全部重复数据"></a>删除全部重复数据</h2><p>将上面的查询select改为delete会出现如下错误：<strong>[Err] 1093 - You can’t specify target table ‘user’ for update in FROM clause</strong><br>原因是：更新这个表的同时又查询了这个表，查询这个表的同时又去更新了这个表，可以理解为死锁。mysql不支持这种更新查询同一张表的操作<br>解决办法：把要更新的几列数据查询出来做为一个第三方表，然后筛选更新。</p>
+<h2 id="只保留一条数据删除多余重复数据语句实例"><a href="#只保留一条数据删除多余重复数据语句实例" class="headerlink" title="只保留一条数据删除多余重复数据语句实例"></a>只保留一条数据删除多余重复数据语句实例</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">delete</span> <span class="keyword">from</span> <span class="keyword">user</span> <span class="keyword">where</span> <span class="keyword">id</span> <span class="keyword">not</span> <span class="keyword">in</span> (</span><br><span class="line">	<span class="keyword">select</span> t.minid <span class="keyword">from</span> </span><br><span class="line">		(<span class="keyword">select</span> <span class="keyword">min</span>(<span class="keyword">id</span>) <span class="keyword">as</span> minid <span class="keyword">from</span> <span class="keyword">user</span> <span class="keyword">GROUP</span> <span class="keyword">BY</span> username) t</span><br><span class="line"> )</span><br></pre></td></tr></table></figure>
+
+<h2 id="思路："><a href="#思路：" class="headerlink" title="思路："></a>思路：</h2><ol>
+<li>按重复字段进行分组，查询出每组最小的id。(语句实例第三行)</li>
+<li>把它作为一个临时表进行查询出id。(语句实例第二行)</li>
+<li>查询全表把id不在上面两部查询出来的id删掉。(语句实例第一行)</li>
+</ol>
+
       
     </div>
-    
-
-
 
     
+      
+
+
+    
+
     
     
+    
+
+	<div>
+	  
+		<div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+	  
+	</div>
+
+    
+
+    
+      
+    
+    
+      <div>
+        <div id="reward-container">
+  <div>感觉文章不错，就赏个吧！</div>
+  <button id="reward-button" disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+
+    
+      
+      
+        
+      
+      <div style="display: inline-block">
+        <img src="/images/wechatpay.jpg" alt="wjup 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+      
+      
+        
+      
+      <div style="display: inline-block">
+        <img src="/images/alipay.jpg" alt="wjup 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        
+          
+        
+        <div class="post-tags">
+          
+            <a href="/tags/数据处理/" rel="tag"><i class="fa fa-tag"></i> 数据处理</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/07/23/常用浏览器user-agent/" rel="next" title="常用浏览器user-agent">
+                <i class="fa fa-chevron-left"></i> 常用浏览器user-agent
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
   </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -492,8 +784,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -697,6 +998,23 @@
       </div>
 
       
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#先展示下示例user表数据"><span class="nav-number">1.</span> <span class="nav-text">先展示下示例user表数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#先把数据进行分组，把有重复数据的组筛选出来"><span class="nav-number">2.</span> <span class="nav-text">先把数据进行分组，把有重复数据的组筛选出来</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#查询出全部重复数据"><span class="nav-number">3.</span> <span class="nav-text">查询出全部重复数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#删除全部重复数据"><span class="nav-number">4.</span> <span class="nav-text">删除全部重复数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#只保留一条数据删除多余重复数据语句实例"><span class="nav-number">5.</span> <span class="nav-text">只保留一条数据删除多余重复数据语句实例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#思路："><span class="nav-number">6.</span> <span class="nav-text">思路：</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
 
       
 
@@ -878,6 +1196,8 @@ setInterval("createtime()",250);
 
   
 
+
+  
 
 
   
