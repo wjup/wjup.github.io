@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://wjup.com/social/index.html</loc>
+    
+    <lastmod>2019-08-01T00:52:47.594Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://wjup.com/2019/07/29/mysql%E5%88%A0%E9%99%A4%E5%A4%9A%E4%BD%99%E9%87%8D%E5%A4%8D%E6%95%B0%E6%8D%AE%E5%8F%AA%E4%BF%9D%E7%95%99%E4%B8%80%E6%9D%A1%E6%95%B0%E6%8D%AE/</loc>
     
     <lastmod>2019-07-29T03:28:45.469Z</lastmod>
@@ -54,13 +61,6 @@
     <loc>https://wjup.com/2019/07/18/%E8%AE%B0%E4%B8%80%E6%AC%A1%E5%A4%A7%E6%84%8F/</loc>
     
     <lastmod>2019-07-19T02:24:51.906Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wjup.com/social/index.html</loc>
-    
-    <lastmod>2019-07-18T04:59:08.655Z</lastmod>
     
   </url>
   
