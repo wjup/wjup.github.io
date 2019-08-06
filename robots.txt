@@ -6,5 +6,5 @@ Allow: /tags/
 Allow: /page/
 Disallow: /js/
 Disallow: /css/
-Sitemap: https://wjup.top/sitemap.xml
-Sitemap: https://wjup.top/baidusitemap.xml
+Sitemap: https://blog.wjup.top/sitemap.xml
+Sitemap: https://blog.wjup.top/baidusitemap.xml
