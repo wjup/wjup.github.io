@@ -1927,7 +1927,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #aadafe;
+  background: #3671d6;
 }
 .feed-link,
 .chat {
@@ -3170,12 +3170,12 @@ pre {
   border-radius: 10px;
 }
 body {
-  background: url("https://images.unsplash.com/photo-1517102040781-e27aac55844b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1394&q=80");
+/*background: url(https://images.unsplash.com/photo-1517102040781-e27aac55844b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1394&q=80);*/
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: 50% 50%;
-/*background: #5cadad;*/
+  background: #5cadad;
 }
 .main-inner {
   opacity: 0.9;
