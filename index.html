@@ -664,7 +664,7 @@
                 
               
 
-              <time title="创建时间：2019-08-15 09:59:21 / 修改时间：10:09:25" itemprop="dateCreated datePublished" datetime="2019-08-15T09:59:21+08:00">2019-08-15</time>
+              <time title="创建时间：2019-08-15 09:59:21 / 修改时间：10:25:53" itemprop="dateCreated datePublished" datetime="2019-08-15T09:59:21+08:00">2019-08-15</time>
             </span>
           
 
@@ -733,12 +733,9 @@
 		
 	  
         
-          
-            <p>
-              修改打包形式在pom.xml里设置 &lt;packaging&gt;war&lt;/packaging&gt;
-在pom.xml里找到spring-boot-starter-web依赖节点，在其中添加如下代码&lt;dependency&gt;    &lt;groupId&gt;org.spri
-              ...
-            </p>
+          <div class="note primary no-icon">
+            <p>springboot项目有内置的服务，可直接打成jar包，<code>java -jar xxx.jar</code>运行就可。但是想要用nginx+tomcat做个集群利用jar好像就不太方便了。<br>所以需求就来了：打war包、tomcat间session共享</p>
+          </div>
           <!--noindex-->
           
             <div class="post-button text-center">

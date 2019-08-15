@@ -99,18 +99,18 @@
 
 
 
-  <meta name="description" content="修改打包形式在pom.xml里设置 &amp;lt;packaging&amp;gt;war&amp;lt;/packaging&amp;gt; 在pom.xml里找到spring-boot-starter-web依赖节点，在其中添加如下代码1234567891011&amp;lt;dependency&amp;gt;    &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;    &amp;">
+  <meta name="description" content="springboot项目有内置的服务，可直接打成jar包，java -jar xxx.jar运行就可。但是想要用nginx+tomcat做个集群利用jar好像就不太方便了。所以需求就来了：打war包、tomcat间session共享">
 <meta name="keywords" content="springboot,session">
 <meta property="og:type" content="article">
 <meta property="og:title" content="将springboot项目打包成war包和利用redis实现session共享">
 <meta property="og:url" content="https://blog.wjup.com/2019/08/15/将springboot项目打包成war包和利用redis实现session共享/index.html">
 <meta property="og:site_name" content="WJUP">
-<meta property="og:description" content="修改打包形式在pom.xml里设置 &amp;lt;packaging&amp;gt;war&amp;lt;/packaging&amp;gt; 在pom.xml里找到spring-boot-starter-web依赖节点，在其中添加如下代码1234567891011&amp;lt;dependency&amp;gt;    &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;    &amp;">
+<meta property="og:description" content="springboot项目有内置的服务，可直接打成jar包，java -jar xxx.jar运行就可。但是想要用nginx+tomcat做个集群利用jar好像就不太方便了。所以需求就来了：打war包、tomcat间session共享">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-15T02:09:25.484Z">
+<meta property="og:updated_time" content="2019-08-15T02:25:53.543Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="将springboot项目打包成war包和利用redis实现session共享">
-<meta name="twitter:description" content="修改打包形式在pom.xml里设置 &amp;lt;packaging&amp;gt;war&amp;lt;/packaging&amp;gt; 在pom.xml里找到spring-boot-starter-web依赖节点，在其中添加如下代码1234567891011&amp;lt;dependency&amp;gt;    &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;    &amp;">
+<meta name="twitter:description" content="springboot项目有内置的服务，可直接打成jar包，java -jar xxx.jar运行就可。但是想要用nginx+tomcat做个集群利用jar好像就不太方便了。所以需求就来了：打war包、tomcat间session共享">
 
 
 
@@ -462,7 +462,7 @@
                 
               
 
-              <time title="创建时间：2019-08-15 09:59:21 / 修改时间：10:09:25" itemprop="dateCreated datePublished" datetime="2019-08-15T09:59:21+08:00">2019-08-15</time>
+              <time title="创建时间：2019-08-15 09:59:21 / 修改时间：10:25:53" itemprop="dateCreated datePublished" datetime="2019-08-15T09:59:21+08:00">2019-08-15</time>
             </span>
           
 
@@ -526,7 +526,12 @@
       
 
       
-        <h1 id="修改打包形式"><a href="#修改打包形式" class="headerlink" title="修改打包形式"></a>修改打包形式</h1><p>在pom.xml里设置 <code>&lt;packaging&gt;war&lt;/packaging&gt;</code></p>
+        <div class="note primary no-icon">
+            <p>springboot项目有内置的服务，可直接打成jar包，<code>java -jar xxx.jar</code>运行就可。但是想要用nginx+tomcat做个集群利用jar好像就不太方便了。<br>所以需求就来了：打war包、tomcat间session共享</p>
+          </div>
+<a id="more"></a>
+
+<h1 id="修改打包形式"><a href="#修改打包形式" class="headerlink" title="修改打包形式"></a>修改打包形式</h1><p>在pom.xml里设置 <code>&lt;packaging&gt;war&lt;/packaging&gt;</code></p>
 <h1 id="在pom-xml里找到spring-boot-starter-web依赖节点，在其中添加如下代码"><a href="#在pom-xml里找到spring-boot-starter-web依赖节点，在其中添加如下代码" class="headerlink" title="在pom.xml里找到spring-boot-starter-web依赖节点，在其中添加如下代码"></a>在pom.xml里找到spring-boot-starter-web依赖节点，在其中添加如下代码</h1><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-web<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 移除嵌入式tomcat插件 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">exclusions</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">exclusion</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-tomcat<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">exclusion</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">exclusions</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <h1 id="添加servlet-api的依赖，下面两种方式都可以，任选其一"><a href="#添加servlet-api的依赖，下面两种方式都可以，任选其一" class="headerlink" title="添加servlet-api的依赖，下面两种方式都可以，任选其一"></a>添加servlet-api的依赖，下面两种方式都可以，任选其一</h1><ol>
@@ -556,7 +561,7 @@
 <p>注：项目配置文件端口和tomcat端口可不需一致。<br>多次试验，事实证明打成war包，配置文件里的端口会失效，会直接用tomcat设置的端口，所以配置文件的端口是多少都不影响</p>
 </blockquote>
 <p>发布成功</p>
-<h1 id="注：多tomcat设置session共享方法"><a href="#注：多tomcat设置session共享方法" class="headerlink" title="注：多tomcat设置session共享方法"></a>注：多tomcat设置session共享方法</h1><ol>
+<h1 id="多tomcat设置session共享方法"><a href="#多tomcat设置session共享方法" class="headerlink" title="多tomcat设置session共享方法"></a>多tomcat设置session共享方法</h1><ol>
 <li>导入依赖<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.session<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-session-data-redis<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--如果已导入redis的依赖可不用导入下面的依赖--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-data-redis<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 
@@ -568,6 +573,8 @@
 <li><p>然后为主类（启动类）添加 <code>@EnableRedisHttpSession</code> 注解</p>
 </li>
 </ol>
+<h1 id="java命令直接运行jar包方式"><a href="#java命令直接运行jar包方式" class="headerlink" title="java命令直接运行jar包方式"></a>java命令直接运行jar包方式</h1><h2 id="如果java定义了jar包的main-class入口，则使用如下命令"><a href="#如果java定义了jar包的main-class入口，则使用如下命令" class="headerlink" title="如果java定义了jar包的main class入口，则使用如下命令"></a>如果java定义了jar包的main class入口，则使用如下命令</h2><p><code>java -jar myjar.jar</code></p>
+<h2 id="如果Java没有定义jar的main-class入口，则使用如下命令"><a href="#如果Java没有定义jar的main-class入口，则使用如下命令" class="headerlink" title="如果Java没有定义jar的main class入口，则使用如下命令"></a>如果Java没有定义jar的main class入口，则使用如下命令</h2><p><code>java -cp myjar.jar com.example.MainClass</code></p>
 
       
     </div>
@@ -982,7 +989,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#修改打包形式"><span class="nav-number">1.</span> <span class="nav-text">修改打包形式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#在pom-xml里找到spring-boot-starter-web依赖节点，在其中添加如下代码"><span class="nav-number">2.</span> <span class="nav-text">在pom.xml里找到spring-boot-starter-web依赖节点，在其中添加如下代码</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#添加servlet-api的依赖，下面两种方式都可以，任选其一"><span class="nav-number">3.</span> <span class="nav-text">添加servlet-api的依赖，下面两种方式都可以，任选其一</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#修改启动类，并重写初始化方法"><span class="nav-number">4.</span> <span class="nav-text">修改启动类，并重写初始化方法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#针对有websocket功能的"><span class="nav-number">5.</span> <span class="nav-text">针对有websocket功能的</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#注释掉WebSocketConfig-java-websocket配置类-中的bean-有的说只需注释掉-bean这行就可以，未测试"><span class="nav-number">5.1.</span> <span class="nav-text">注释掉WebSocketConfig.java(websocket配置类)中的bean(有的说只需注释掉@bean这行就可以，未测试)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#pom添加依赖jar包"><span class="nav-number">5.2.</span> <span class="nav-text">pom添加依赖jar包</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#打包部署"><span class="nav-number">6.</span> <span class="nav-text">打包部署</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#最后在浏览器中输入"><span class="nav-number">7.</span> <span class="nav-text">最后在浏览器中输入</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#注：多tomcat设置session共享方法"><span class="nav-number">8.</span> <span class="nav-text">注：多tomcat设置session共享方法</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#修改打包形式"><span class="nav-number">1.</span> <span class="nav-text">修改打包形式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#在pom-xml里找到spring-boot-starter-web依赖节点，在其中添加如下代码"><span class="nav-number">2.</span> <span class="nav-text">在pom.xml里找到spring-boot-starter-web依赖节点，在其中添加如下代码</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#添加servlet-api的依赖，下面两种方式都可以，任选其一"><span class="nav-number">3.</span> <span class="nav-text">添加servlet-api的依赖，下面两种方式都可以，任选其一</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#修改启动类，并重写初始化方法"><span class="nav-number">4.</span> <span class="nav-text">修改启动类，并重写初始化方法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#针对有websocket功能的"><span class="nav-number">5.</span> <span class="nav-text">针对有websocket功能的</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#注释掉WebSocketConfig-java-websocket配置类-中的bean-有的说只需注释掉-bean这行就可以，未测试"><span class="nav-number">5.1.</span> <span class="nav-text">注释掉WebSocketConfig.java(websocket配置类)中的bean(有的说只需注释掉@bean这行就可以，未测试)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#pom添加依赖jar包"><span class="nav-number">5.2.</span> <span class="nav-text">pom添加依赖jar包</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#打包部署"><span class="nav-number">6.</span> <span class="nav-text">打包部署</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#最后在浏览器中输入"><span class="nav-number">7.</span> <span class="nav-text">最后在浏览器中输入</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#多tomcat设置session共享方法"><span class="nav-number">8.</span> <span class="nav-text">多tomcat设置session共享方法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#java命令直接运行jar包方式"><span class="nav-number">9.</span> <span class="nav-text">java命令直接运行jar包方式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#如果java定义了jar包的main-class入口，则使用如下命令"><span class="nav-number">9.1.</span> <span class="nav-text">如果java定义了jar包的main class入口，则使用如下命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如果Java没有定义jar的main-class入口，则使用如下命令"><span class="nav-number">9.2.</span> <span class="nav-text">如果Java没有定义jar的main class入口，则使用如下命令</span></a></li></ol></li></ol></div>
             
 
           </div>
