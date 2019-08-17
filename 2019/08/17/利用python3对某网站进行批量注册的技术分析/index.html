@@ -109,7 +109,8 @@
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://blog.wjup.com/2019/08/17/利用python3对某网站进行批量注册的技术分析/reg.png">
 <meta property="og:image" content="https://blog.wjup.com/2019/08/17/利用python3对某网站进行批量注册的技术分析/token.png">
-<meta property="og:updated_time" content="2019-08-17T14:51:51.407Z">
+<meta property="og:image" content="https://blog.wjup.com/2019/08/17/利用python3对某网站进行批量注册的技术分析/runInfo.png">
+<meta property="og:updated_time" content="2019-08-17T14:57:24.084Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="利用python3对某网站进行批量注册的技术分析">
 <meta name="twitter:description" content="问题来源于实践，实践是检验真理的唯一标准">
@@ -465,7 +466,7 @@
                 
               
 
-              <time title="创建时间：2019-08-17 21:59:25 / 修改时间：22:51:51" itemprop="dateCreated datePublished" datetime="2019-08-17T21:59:25+08:00">2019-08-17</time>
+              <time title="创建时间：2019-08-17 21:59:25 / 修改时间：22:57:24" itemprop="dateCreated datePublished" datetime="2019-08-17T21:59:25+08:00">2019-08-17</time>
             </span>
           
 
@@ -541,7 +542,7 @@
 <img src="/2019/08/17/利用python3对某网站进行批量注册的技术分析/token.png" width="500">
 
 <p>想必这就是每次注册不能一样的token信息吧，于是换在头信息和注册form表单提交信息中，再次请求，发现是可行的，返回了<strong>{“result”:true,”data”:””}</strong>信息，到页面登陆也是ok的。接着再请求一次就是返回的500了，而且返回的500页面，input的value值也更新了，于是想，能不能利用爬虫把这500页面的input值获取，放到新的注册接口中请求中在此注册呢，于是代码又是一顿撸。<br>获取token—&gt;更新token信息—&gt;请求注册接口。最外层加了个for循环，循环100次，也成功注册了100个账号。页面随便取出一个账号登陆也没毛病</p>
-
+<img src="/2019/08/17/利用python3对某网站进行批量注册的技术分析/runInfo.png" title="Running">
 
 <p>通过这次的批量请求接口并且注册成功的小案例，我们不难发现。一个没有验证码的注册接口，或者一个后台没有限制ip请求次数的网站是多么的危险，轻则生成无数垃圾用户数据，重则可能就会造成数据库的崩溃，进而整个网站的崩溃。</p>
 <p>放代码</p>
