@@ -1927,7 +1927,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #8c3eff;
+  background: #cb9d18;
 }
 .feed-link,
 .chat {
@@ -3176,6 +3176,19 @@ body {
   background-attachment: fixed;
   background-position: 50% 50%;
   background: linear-gradient(to right, #fc5c7d, #6a82fb);
+}
+@media screen and (min-width: 1020px) {
+  body {
+    background-image: url("/images/bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 50% 50%;
+    background-color: #ecebe9;
+  }
+  #footer a {
+    color: #eee;
+  }
 }
 .main-inner {
   opacity: 0.9;
