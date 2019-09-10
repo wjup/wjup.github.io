@@ -133,7 +133,7 @@
 <meta property="og:site_name" content="WJUP">
 <meta property="og:description" content="&amp;emsp;&amp;emsp; 用过quartz才发现如此的好用，由其是使用cron来表达时间，简直不要太赞。不过他的cron表达式和crontab的cron表达式还是稍有不同的。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-09-10T10:04:54.469Z">
+<meta property="og:updated_time" content="2019-09-10T10:08:07.308Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Quartz的cron表达式写法详解">
 <meta name="twitter:description" content="&amp;emsp;&amp;emsp; 用过quartz才发现如此的好用，由其是使用cron来表达时间，简直不要太赞。不过他的cron表达式和crontab的cron表达式还是稍有不同的。">
@@ -488,7 +488,7 @@
                 
               
 
-              <time title="创建时间：2019-09-10 16:56:12 / 修改时间：18:04:54" itemprop="dateCreated datePublished" datetime="2019-09-10T16:56:12+08:00">2019-09-10</time>
+              <time title="创建时间：2019-09-10 16:56:12 / 修改时间：18:08:07" itemprop="dateCreated datePublished" datetime="2019-09-10T16:56:12+08:00">2019-09-10</time>
             </span>
           
 
@@ -557,7 +557,7 @@
 <hr>
 <a id="more"></a>
 
-<h2 id="格式"><a href="#格式" class="headerlink" title="格式"></a>格式</h2><p>* * * * * ? *<br>秒    分    时    天    月    周    年</p>
+<h2 id="格式"><a href="#格式" class="headerlink" title="格式"></a>格式</h2><p><strong>* * * * * ? *</strong><br>秒    分    时    天    月    周    年</p>
 <h2 id="取值范围"><a href="#取值范围" class="headerlink" title="取值范围"></a>取值范围</h2><ol>
 <li>“日”和”周几”不能同时为*和数字，也不能同时为?，否则会报错   </li>
 <li>年若为*，可以被省略   </li>
@@ -607,7 +607,7 @@
 <td>, - * /</td>
 </tr>
 </tbody></table>
-<h2 id="特殊字符解释"><a href="#特殊字符解释" class="headerlink" title="特殊字符解释"></a>特殊字符解释</h2><p>*：每一(秒/分…)执行<br>x/y：每隔x执行，从y开始<br>x,y：在第z、y执行(周一周二执行：* * * ? * MON,TUE *)<br>x-y：周期从x到y执行(每年6-8月执行：* * * * 6-8 ? *)<br>L：这个月的最后一天(* * * L * ? *)<br>LW：这个月的最后一个工作日(* * * LW * ? *)<br>nL：这个月的最后一个星期n(* * * nL * ? *)<br>L-n：在本月底前n天(* * * L-n * ? *)<br>x#y：在这个月的第y个星期x(* * * ? * 5#2 *)<br>nW：最近的工作日（周一至周五）至本月n日(* * * nW * ? *)   </p>
+<h2 id="特殊字符解释"><a href="#特殊字符解释" class="headerlink" title="特殊字符解释"></a>特殊字符解释</h2><p><strong>*</strong>：每一(秒/分…)执行<br><strong>x/y</strong>：每隔x执行，从y开始<br><strong>x,y</strong>：在第z、y执行(周一周二执行：* * * ? * MON,TUE *)<br><strong>x-y</strong>：周期从x到y执行(每年6-8月执行：* * * * 6-8 ? *)<br><strong>L</strong>：这个月的最后一天(* * * L * ? *)<br><strong>LW</strong>：这个月的最后一个工作日(* * * LW * ? *)<br><strong>nL</strong>：这个月的最后一个星期n(* * * nL * ? *)<br><strong>L-n</strong>：在本月底前n天(* * * L-n * ? *)<br><strong>x#y</strong>：在这个月的第y个星期x(* * * ? * 5#2 *)<br><strong>nW</strong>：最近的工作日（周一至周五）至本月n日(* * * nW * ? *)   </p>
 <h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><p>一周从星期天开始计数，周天为1，周六为7   </p>
 <h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><ol>
 <li><a href="https://segmentfault.com/q/1010000005016938" target="_blank" rel="noopener">quartz时间表达式中 * 和 ? 的意思似乎差不多？</a>   </li>
