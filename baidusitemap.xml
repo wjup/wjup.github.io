@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://blog.wjup.com/2019/09/10/quartz%E7%9A%84cron%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%86%99%E6%B3%95%E8%AF%A6%E8%A7%A3/</loc>
+    <lastmod>2019-11-07</lastmod>
+  </url>  <url>
     <loc>https://blog.wjup.com/2019/10/22/IDEA2019-2%E6%B0%B8%E4%B9%85%E7%A0%B4%E8%A7%A3%E7%89%88%EF%BC%88%E4%BB%85%E4%BE%9B%E5%AD%A6%E4%B9%A0%E4%BA%A4%E6%B5%81%EF%BC%89/</loc>
     <lastmod>2019-10-21</lastmod>
   </url>  <url>
@@ -21,9 +24,6 @@
   </url>  <url>
     <loc>https://blog.wjup.com/2019/09/20/Y%C2%B7W/</loc>
     <lastmod>2019-09-20</lastmod>
-  </url>  <url>
-    <loc>https://blog.wjup.com/2019/09/10/quartz%E7%9A%84cron%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%86%99%E6%B3%95%E8%AF%A6%E8%A7%A3/</loc>
-    <lastmod>2019-09-10</lastmod>
   </url>  <url>
     <loc>https://blog.wjup.com/2019/09/06/Thymeleaf%E8%87%AA%E5%B8%A6%E7%9A%84%E6%97%B6%E9%97%B4%E5%B7%A5%E5%85%B7%E7%B1%BB/</loc>
     <lastmod>2019-09-06</lastmod>

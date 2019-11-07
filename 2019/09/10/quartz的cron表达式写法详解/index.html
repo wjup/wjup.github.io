@@ -128,14 +128,14 @@
   <meta name="description" content="&amp;emsp;&amp;emsp; 用过quartz才发现如此的好用，由其是使用cron来表达时间，简直不要太赞。不过他的cron表达式和crontab的cron表达式还是稍有不同的。">
 <meta name="keywords" content="quartz,cron">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Quartz的cron表达式写法详解">
+<meta property="og:title" content="WJUP">
 <meta property="og:url" content="https://blog.wjup.com/2019/09/10/quartz的cron表达式写法详解/index.html">
 <meta property="og:site_name" content="WJUP">
 <meta property="og:description" content="&amp;emsp;&amp;emsp; 用过quartz才发现如此的好用，由其是使用cron来表达时间，简直不要太赞。不过他的cron表达式和crontab的cron表达式还是稍有不同的。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-09-10T10:08:07.308Z">
+<meta property="og:updated_time" content="2019-11-07T01:00:18.786Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Quartz的cron表达式写法详解">
+<meta name="twitter:title" content="WJUP">
 <meta name="twitter:description" content="&amp;emsp;&amp;emsp; 用过quartz才发现如此的好用，由其是使用cron来表达时间，简直不要太赞。不过他的cron表达式和crontab的cron表达式还是稍有不同的。">
 
 
@@ -154,7 +154,7 @@
   };
 </script>
 
-  <title>Quartz的cron表达式写法详解 | WJUP</title>
+  <title> | WJUP</title>
   
 
 
@@ -460,7 +460,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Quartz的cron表达式写法详解
+          <h2 class="post-title" itemprop="name headline">
 
               
             
@@ -488,13 +488,23 @@
                 
               
 
-              <time title="创建时间：2019-09-10 16:56:12 / 修改时间：18:08:07" itemprop="dateCreated datePublished" datetime="2019-09-10T16:56:12+08:00">2019-09-10</time>
+              <time title="创建时间：2019-09-10 16:56:12" itemprop="dateCreated datePublished" datetime="2019-09-10T16:56:12+08:00">2019-09-10</time>
             </span>
           
 
           
             
 
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-11-07 09:00:18" itemprop="dateModified" datetime="2019-11-07T09:00:18+08:00">2019-11-07</time>
+              </span>
             
           
 
@@ -609,9 +619,118 @@
 </tbody></table>
 <h2 id="特殊字符解释"><a href="#特殊字符解释" class="headerlink" title="特殊字符解释"></a>特殊字符解释</h2><p><strong>*</strong>：每一(秒/分…)执行<br><strong>x/y</strong>：每隔x执行，从y开始<br><strong>x,y</strong>：在第z、y执行(周一周二执行：* * * ? * MON,TUE *)<br><strong>x-y</strong>：周期从x到y执行(每年6-8月执行：* * * * 6-8 ? *)<br><strong>L</strong>：这个月的最后一天(* * * L * ? *)<br><strong>LW</strong>：这个月的最后一个工作日(* * * LW * ? *)<br><strong>nL</strong>：这个月的最后一个星期n(* * * nL * ? *)<br><strong>L-n</strong>：在本月底前n天(* * * L-n * ? *)<br><strong>x#y</strong>：在这个月的第y个星期x(* * * ? * 5#2 *)<br><strong>nW</strong>：最近的工作日（周一至周五）至本月n日(* * * nW * ? *)   </p>
 <h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><p>一周从星期天开始计数，周天为1，周六为7   </p>
+<h2 id="表达式示例"><a href="#表达式示例" class="headerlink" title="表达式示例"></a>表达式示例</h2><table>
+<thead>
+<tr>
+<th>表达式</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0 * * * * ?</td>
+<td>每1分钟触发一次</td>
+</tr>
+<tr>
+<td>0 0 * * * ?</td>
+<td>每天每1小时触发一次</td>
+</tr>
+<tr>
+<td>0 0 10 * * ?</td>
+<td>每天10点触发一次</td>
+</tr>
+<tr>
+<td>0 * 14 * * ?</td>
+<td>在每天下午2点到下午2:59期间的每1分钟触发</td>
+</tr>
+<tr>
+<td>0 30 9 1 * ?</td>
+<td>每月1号上午9点半</td>
+</tr>
+<tr>
+<td>0 15 10 15 * ?</td>
+<td>每月15日上午10:15触发</td>
+</tr>
+<tr>
+<td>*/5 * * * * ?</td>
+<td>每隔5秒执行一次</td>
+</tr>
+<tr>
+<td>0 */1 * * * ?</td>
+<td>每隔1分钟执行一次</td>
+</tr>
+<tr>
+<td>0 0 5-15 * * ?</td>
+<td>每天5-15点整点触发</td>
+</tr>
+<tr>
+<td>0 0/3 * * * ?</td>
+<td>每三分钟触发一次</td>
+</tr>
+<tr>
+<td>0 0-5 14 * * ?</td>
+<td>在每天下午2点到下午2:05期间的每1分钟触发</td>
+</tr>
+<tr>
+<td>0 0/5 14 * * ?</td>
+<td>在每天下午2点到下午2:55期间的每5分钟触发</td>
+</tr>
+<tr>
+<td>0 0/5 14,18 * * ?</td>
+<td>在每天下午2点到2:55期间和下午6点到6:55期间的每5分钟触发</td>
+</tr>
+<tr>
+<td>0 0/30 9-17 * * ?</td>
+<td>朝九晚五工作时间内每半小时</td>
+</tr>
+<tr>
+<td>0 0 10,14,16 * * ?</td>
+<td>每天上午10点，下午2点，4点</td>
+</tr>
+<tr>
+<td>0 0 12 ? * WED</td>
+<td>表示每个星期三中午12点</td>
+</tr>
+<tr>
+<td>0 0 17 ? * TUES,THUR,SAT</td>
+<td>每周二、四、六下午五点</td>
+</tr>
+<tr>
+<td>0 10,44 14 ? 3 WED</td>
+<td>每年三月的星期三的下午2:10和2:44触发</td>
+</tr>
+<tr>
+<td>0 15 10 ? * MON-FRI</td>
+<td>周一至周五的上午10:15触发</td>
+</tr>
+<tr>
+<td>0 0 23 L * ?</td>
+<td>每月最后一天23点执行一次</td>
+</tr>
+<tr>
+<td>0 15 10 L * ?</td>
+<td>每月最后一日的上午10:15触发</td>
+</tr>
+<tr>
+<td>0 15 10 ? * 6L</td>
+<td>每月的最后一个星期五上午10:15触发</td>
+</tr>
+<tr>
+<td>0 15 10 * * ? 2005</td>
+<td>2005年的每天上午10:15触发</td>
+</tr>
+<tr>
+<td>0 15 10 ? * 6L 2002-2005</td>
+<td>2002年至2005年的每月的最后一个星期五上午10:15触发</td>
+</tr>
+<tr>
+<td>0 15 10 ? * 6#3</td>
+<td>每月的第三个星期五上午10:15触发</td>
+</tr>
+</tbody></table>
 <h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><ol>
 <li><a href="https://segmentfault.com/q/1010000005016938" target="_blank" rel="noopener">quartz时间表达式中 * 和 ? 的意思似乎差不多？</a>   </li>
 <li><a href="http://pigx.pig4cloud.com" target="_blank" rel="noopener">pigx微服务快速开发框架项目</a></li>
+<li>示例来源<a href="https://www.cnblogs.com/lazyInsects/p/8075487.html" target="_blank" rel="noopener">博客园</a></li>
 </ol>
 
       
@@ -1058,7 +1177,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#格式"><span class="nav-number">1.</span> <span class="nav-text">格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#取值范围"><span class="nav-number">2.</span> <span class="nav-text">取值范围</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#特殊字符解释"><span class="nav-number">3.</span> <span class="nav-text">特殊字符解释</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#注意"><span class="nav-number">4.</span> <span class="nav-text">注意</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考文档"><span class="nav-number">5.</span> <span class="nav-text">参考文档</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#格式"><span class="nav-number">1.</span> <span class="nav-text">格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#取值范围"><span class="nav-number">2.</span> <span class="nav-text">取值范围</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#特殊字符解释"><span class="nav-number">3.</span> <span class="nav-text">特殊字符解释</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#注意"><span class="nav-number">4.</span> <span class="nav-text">注意</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#表达式示例"><span class="nav-number">5.</span> <span class="nav-text">表达式示例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考文档"><span class="nav-number">6.</span> <span class="nav-text">参考文档</span></a></li></ol></div>
             
 
           </div>
@@ -1104,7 +1223,7 @@
         mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
         seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
         snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
-        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 ";
+        document.getElementById("timeDate").innerHTML = "一转眼 已逝 "+dnum+" 天 ";
         document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
     }
 setInterval("createtime()",250);
