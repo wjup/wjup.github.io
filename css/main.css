@@ -1927,7 +1927,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #f4b314;
+  background: #ffbe2a;
 }
 .feed-link,
 .chat {
@@ -3179,20 +3179,24 @@ pre {
     background-color: #ecebe9;
   }
 }
-.main-inner {
-  opacity: 0.9;
+.post-block {
+  background: rgba(255,255,255,0.9);
 }
 .header-inner {
   background-color: rgba(255,255,255,0.9);
 }
-#sidebar {
+.sidebar-inner {
   border-radius: 15px;
+  background-color: rgba(255,255,255,0.9);
 }
 .site-meta {
   background-image: url("/images/brand.jpg");
   background-position: 50% 50%;
   background-size: 100% 100%;
-  opacity: 0.9;
+  background: rgba(0,0,0,0.9);
+}
+.pagination {
+  background-color: rgba(255,255,255,0.9);
 }
 ::-webkit-scrollbar {
   width: 8px;
