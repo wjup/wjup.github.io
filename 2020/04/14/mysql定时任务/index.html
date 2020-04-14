@@ -125,18 +125,18 @@
 
 
 
-  <meta name="description" content="lombok官方下载地址：https://projectlombok.org/downloadlombok的maven与引用：https://mvnrepository.com/artifact/org.projectlombok/lombok">
-<meta name="keywords" content="笔记">
+  <meta name="description" content="&amp;emsp;&amp;emsp;自MySQL5.1.6起，增加了一个非常有特色的功能-事件调度器（Event Scheduler），可以用做定时执行某些特定任务（例如：删除记录、对数据进行汇总、数据备份等等），来取代原先只能由操作系统的计划任务来执行的工作。更值得一提的是MySQL的事件调度器可以精确到每秒钟执行一个任务，而操作系统的计划任务（如：Linux的cron或Windows下的任务计划）只能精确">
+<meta name="keywords" content="定时任务">
 <meta property="og:type" content="article">
-<meta property="og:title" content="lombok包的介绍">
-<meta property="og:url" content="https://blog.wjup.top/2019/06/23/lombok包的介绍/index.html">
+<meta property="og:title" content="mysql的定时任务-事件">
+<meta property="og:url" content="https://blog.wjup.top/2020/04/14/mysql定时任务/index.html">
 <meta property="og:site_name" content="WJUP">
-<meta property="og:description" content="lombok官方下载地址：https://projectlombok.org/downloadlombok的maven与引用：https://mvnrepository.com/artifact/org.projectlombok/lombok">
+<meta property="og:description" content="&amp;emsp;&amp;emsp;自MySQL5.1.6起，增加了一个非常有特色的功能-事件调度器（Event Scheduler），可以用做定时执行某些特定任务（例如：删除记录、对数据进行汇总、数据备份等等），来取代原先只能由操作系统的计划任务来执行的工作。更值得一提的是MySQL的事件调度器可以精确到每秒钟执行一个任务，而操作系统的计划任务（如：Linux的cron或Windows下的任务计划）只能精确">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-08T07:00:45.123Z">
+<meta property="og:updated_time" content="2020-04-14T08:55:10.062Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="lombok包的介绍">
-<meta name="twitter:description" content="lombok官方下载地址：https://projectlombok.org/downloadlombok的maven与引用：https://mvnrepository.com/artifact/org.projectlombok/lombok">
+<meta name="twitter:title" content="mysql的定时任务-事件">
+<meta name="twitter:description" content="&amp;emsp;&amp;emsp;自MySQL5.1.6起，增加了一个非常有特色的功能-事件调度器（Event Scheduler），可以用做定时执行某些特定任务（例如：删除记录、对数据进行汇总、数据备份等等），来取代原先只能由操作系统的计划任务来执行的工作。更值得一提的是MySQL的事件调度器可以精确到每秒钟执行一个任务，而操作系统的计划任务（如：Linux的cron或Windows下的任务计划）只能精确">
 
 
 
@@ -144,7 +144,7 @@
 
   
   
-  <link rel="canonical" href="https://blog.wjup.top/2019/06/23/lombok包的介绍/">
+  <link rel="canonical" href="https://blog.wjup.top/2020/04/14/mysql定时任务/">
 
 
 
@@ -154,7 +154,7 @@
   };
 </script>
 
-  <title>lombok包的介绍 | WJUP</title>
+  <title>mysql的定时任务-事件 | WJUP</title>
   
 
 
@@ -443,7 +443,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://blog.wjup.top/2019/06/23/lombok包的介绍/">
+    <link itemprop="mainEntityOfPage" href="https://blog.wjup.top/2020/04/14/mysql定时任务/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="wjup">
@@ -460,7 +460,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">lombok包的介绍
+          <h2 class="post-title" itemprop="name headline">mysql的定时任务-事件
 
               
             
@@ -488,23 +488,13 @@
                 
               
 
-              <time title="创建时间：2019-06-23 14:24:02" itemprop="dateCreated datePublished" datetime="2019-06-23T14:24:02+08:00">2019-06-23</time>
+              <time title="创建时间：2020-04-14 15:32:51 / 修改时间：16:55:10" itemprop="dateCreated datePublished" datetime="2020-04-14T15:32:51+08:00">2020-04-14</time>
             </span>
           
 
           
             
 
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-07-08 15:00:45" itemprop="dateModified" datetime="2019-07-08T15:00:45+08:00">2019-07-08</time>
-              </span>
             
           
 
@@ -524,7 +514,7 @@
                   ，
                 
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/编程/java/" itemprop="url" rel="index"><span itemprop="name">java</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/编程/mysql/" itemprop="url" rel="index"><span itemprop="name">mysql</span></a></span>
 
                 
                 
@@ -562,40 +552,121 @@
       
 
       
-        <p>lombok官方下载地址：<a href="https://projectlombok.org/download" target="_blank" rel="noopener">https://projectlombok.org/download</a><br>lombok的maven与引用：<a href="https://mvnrepository.com/artifact/org.projectlombok/lombok" target="_blank" rel="noopener">https://mvnrepository.com/artifact/org.projectlombok/lombok</a></p>
+        <p>&emsp;&emsp;自MySQL5.1.6起，增加了一个非常有特色的功能-事件调度器（Event Scheduler），可以用做定时执行某些特定任务（例如：删除记录、对数据进行汇总、数据备份等等），来取代原先只能由操作系统的计划任务来执行的工作。更值得一提的是MySQL的事件调度器可以精确到每秒钟执行一个任务，而操作系统的计划任务（如：Linux的cron或Windows下的任务计划）只能精确到每分钟执行一次。对于一些对数据实时性要求比较高的应用（例如：股票、赔率、比分等）就非常适合。</p>
 <a id="more"></a>
 
-<h3 id="功能介绍"><a href="#功能介绍" class="headerlink" title="功能介绍"></a>功能介绍</h3><p>lombok可以通过注解的形式，在在编译时自动为实体类属性生成构造器、getter/setter、equals、hashcode、toString方法。非常便捷，而且实体类java文件中还不会长长的get/set代码，显得很简洁。</p>
-<h3 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h3><p>编辑器使用，先安装lombok插件，maven中引用lombok的jar包</p>
-<h3 id="注解解释"><a href="#注解解释" class="headerlink" title="注解解释"></a>注解解释</h3><h4 id="Data"><a href="#Data" class="headerlink" title="@Data"></a>@Data</h4><p>@Data注解在类上，会为所有属性自动生成setter/getter、equals、canEqual、hashCode、toString方法。如果属性为final修饰，则不会为该属性生成setter方法。</p>
-<p>示例<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.Serializable;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> lombok.Data;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Data</span> </span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DataExample</span> <span class="keyword">implements</span> <span class="title">Serializable</span></span>&#123;</span><br><span class="line">  <span class="keyword">private</span> <span class="keyword">final</span> String name;</span><br><span class="line">  <span class="keyword">private</span> <span class="keyword">int</span> age;</span><br><span class="line">  <span class="keyword">private</span> <span class="keyword">double</span> score;</span><br><span class="line">  <span class="keyword">private</span> String[] tags;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h4 id="Getter-Setter"><a href="#Getter-Setter" class="headerlink" title="@Getter/@Setter"></a>@Getter/@Setter</h4><p>@Getter/@Setter注解在属性上，可以为属性生成get/set方法</p>
-<p>示例<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.Serializable;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> lombok.Getter;</span><br><span class="line"><span class="keyword">import</span> lombok.Setter;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DataExample</span> <span class="keyword">implements</span> <span class="title">Serializable</span></span>&#123;</span><br><span class="line">  <span class="keyword">private</span> <span class="keyword">final</span> String name;</span><br><span class="line"></span><br><span class="line">  <span class="meta">@Getter</span> <span class="meta">@Setter</span></span><br><span class="line">  <span class="keyword">private</span> <span class="keyword">int</span> age;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">private</span> <span class="keyword">double</span> score;</span><br><span class="line">  <span class="keyword">private</span> String[] tags;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h4 id="ToString"><a href="#ToString" class="headerlink" title="@ToString"></a>@ToString</h4><p>@ToString注解在类上，Lombok会生成一个toString()方法，默认情况下，会输出类名、所有属性（会按照属性定义顺序），用逗号来分割。也可以设置不包含哪些字段，如：@ToString(exclude = {“age”,”name”})</p>
-<p>示例<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.Serializable;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> lombok.ToString;</span><br><span class="line"></span><br><span class="line"><span class="meta">@ToString</span> </span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DataExample</span> <span class="keyword">implements</span> <span class="title">Serializable</span></span>&#123;</span><br><span class="line">  <span class="keyword">private</span> <span class="keyword">final</span> String name;</span><br><span class="line">  <span class="keyword">private</span> <span class="keyword">int</span> age;</span><br><span class="line">  <span class="keyword">private</span> <span class="keyword">double</span> score;</span><br><span class="line">  <span class="keyword">private</span> String[] tags;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h4 id="NoArgsConstructor-RequiredArgsConstructor-AllArgsConstructor"><a href="#NoArgsConstructor-RequiredArgsConstructor-AllArgsConstructor" class="headerlink" title="@NoArgsConstructor/@RequiredArgsConstructor/@AllArgsConstructor"></a>@NoArgsConstructor/@RequiredArgsConstructor/@AllArgsConstructor</h4><p>@NoArgsConstructor/@RequiredArgsConstructor/@AllArgsConstructor注解在类上，分别可以实现无参构造器/部分参数构造器（为所有 final 和 @NonNull 修饰的字段生成一个构造方法）/全参构造器。</p>
-<p>示例<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.Serializable;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> lombok.AllArgsConstructor;</span><br><span class="line"><span class="keyword">import</span> lombok.NoArgsConstructor;</span><br><span class="line"></span><br><span class="line"><span class="meta">@AllArgsConstructor</span></span><br><span class="line"><span class="meta">@NoArgsConstructor</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DataExample</span> <span class="keyword">implements</span> <span class="title">Serializable</span></span>&#123;</span><br><span class="line">  <span class="keyword">private</span> <span class="keyword">final</span> String name;</span><br><span class="line">  <span class="keyword">private</span> <span class="keyword">int</span> age;</span><br><span class="line">  <span class="keyword">private</span> <span class="keyword">double</span> score;</span><br><span class="line">  <span class="keyword">private</span> String[] tags;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h3 id="Accessors-chain-true"><a href="#Accessors-chain-true" class="headerlink" title="@Accessors(chain = true)"></a>@Accessors(chain = true)</h3><p>@Accessors(chain = true)在类上使用，可以设置对象属性时接连链式设置，比如person,setName(“tom”).setAge(18).setSex(“boy”)….</p>
-<p>示例<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.Serializable;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> lombok.experimental.Accessors;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Accessors</span>(chain = <span class="keyword">true</span>)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DataExample</span> <span class="keyword">implements</span> <span class="title">Serializable</span></span>&#123;</span><br><span class="line">  <span class="keyword">private</span> <span class="keyword">final</span> String name;</span><br><span class="line">  <span class="keyword">private</span> <span class="keyword">int</span> age;</span><br><span class="line">  <span class="keyword">private</span> <span class="keyword">double</span> score;</span><br><span class="line">  <span class="keyword">private</span> String[] tags;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><h4 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h4><ul>
-<li>能通过注解的形式自动生成构造器、getter/setter、equals、hashcode、toString等方法，提高了一定的开发效率</li>
-<li>让代码变得简洁，不用过多的去关注相应的方法</li>
-<li>属性做修改时，也简化了维护为这些属性所生成的getter/setter方法等</li>
+<p>&emsp;事件调度器有时也可以称为临时触发器（temporal triggers），因为事件调度器是基于特定时间周期触发来执行某些任务，而触发器（Triggers）是基于某个表所产生的事件触发的，区别也就在这里。</p>
+<h2 id="首先检查是否开启了定时任务"><a href="#首先检查是否开启了定时任务" class="headerlink" title="首先检查是否开启了定时任务"></a>首先检查是否开启了定时任务</h2><ul>
+<li><p>查看event是否开启 :</p>
+  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SHOW</span> <span class="keyword">VARIABLES</span> <span class="string">``</span><span class="keyword">LIKE</span><span class="string">` `</span><span class="string">'%event_sche%'</span><span class="string">``</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>将事件计划开启 :</p>
+  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SET</span><span class="string">` `</span><span class="keyword">GLOBAL</span><span class="string">` `</span>event_scheduler = <span class="number">1</span>;</span><br><span class="line"><span class="comment">-- 或者</span></span><br><span class="line"><span class="keyword">SET</span> <span class="keyword">GLOBAL</span> event_scheduler = <span class="keyword">ON</span>;</span><br><span class="line"><span class="comment">-- 我们也可以在配置my.cnf文件 中加上 event_scheduler = 1</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>将事件计划关闭 :</p>
+  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SET</span><span class="string">` `</span><span class="keyword">GLOBAL</span><span class="string">` `</span>event_scheduler = <span class="number">0</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>关闭事件任务 :</p>
+  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span><span class="string">` `</span><span class="keyword">EVENT</span> eventName <span class="string">``</span><span class="keyword">ON</span><span class="string">` `</span>COMPLETION <span class="keyword">PRESERVE</span> <span class="keyword">DISABLE</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>开启事件任务 :</p>
+  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span><span class="string">` `</span><span class="keyword">EVENT</span> eventName <span class="string">``</span><span class="keyword">ON</span><span class="string">` `</span>COMPLETION <span class="keyword">PRESERVE</span> <span class="keyword">ENABLE</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看事件任务 :</p>
+  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SHOW</span> <span class="keyword">EVENTS</span> ;</span><br></pre></td></tr></table></figure>
+
+</li>
 </ul>
-<h4 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h4><ul>
-<li>不支持多种参数构造器的重载<br>虽然省去了手动创建getter/setter方法的麻烦，但大大降低了源代码的可读性和完整性，降低了阅读源代码的舒适度</li>
-<li>不支持多种参数构造器的重载<br>虽然省去了手动创建getter/setter方法的麻烦，但大大降低了源代码的可读性和完整性，降低了阅读源代码的舒适度</li>
+<h2 id="创建事件"><a href="#创建事件" class="headerlink" title="创建事件"></a>创建事件</h2><h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">EVENT</span> [IFNOT <span class="keyword">EXISTS</span>] event_name</span><br><span class="line">    　　 ONSCHEDULE schedule</span><br><span class="line">    　　 [ONCOMPLETION [<span class="keyword">NOT</span>] <span class="keyword">PRESERVE</span>]</span><br><span class="line">    　　 [<span class="keyword">ENABLE</span> | <span class="keyword">DISABLE</span>]</span><br><span class="line">    　　 [<span class="keyword">COMMENT</span> <span class="string">'comment'</span>]</span><br><span class="line">    　　 <span class="keyword">DO</span> sql_statement;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">schedule:</span><br><span class="line">　　 AT TIMESTAMP [+ INTERVAL INTERVAL]</span><br><span class="line">　　 | EVERY INTERVAL [STARTS TIMESTAMP] [ENDS TIMESTAMP]</span><br><span class="line">　　</span><br><span class="line">　　INTERVAL:</span><br><span class="line">　　 quantity &#123;YEAR | QUARTER | MONTH | DAY | HOUR | MINUTE |</span><br><span class="line">　　 WEEK | SECOND | YEAR_MONTH | DAY_HOUR | DAY_MINUTE |</span><br><span class="line">　　 DAY_SECOND | HOUR_MINUTE | HOUR_SECOND | MINUTE_SECOND&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>[ON COMPLETION [NOT] PRESERVE]</code>可以设置这个事件是执行一次还是持久执行，默认为NOT PRESERVE。<code>[ENABLE | DISABLE]</code>可以设置该事件创建后状态是否开启或关闭，默认为ENABLE。<br><code>[COMMENT &#39;comment&#39;]</code>可以给该事件加上注释。</p>
+<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><ul>
+<li><p>每秒更新<code>tb_test</code>表的时间</p>
+  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">EVENT</span> e_test_insert</span><br><span class="line"><span class="keyword">ON</span> SCHEDULE EVERY <span class="number">1</span> <span class="keyword">SECOND</span></span><br><span class="line"><span class="keyword">DO</span> <span class="keyword">update</span> tb_test <span class="keyword">set</span> update_time = <span class="keyword">now</span>() <span class="keyword">where</span> <span class="keyword">id</span> = <span class="number">1</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>5天后清空test表：</p>
+  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">EVENT</span> e_test</span><br><span class="line"><span class="keyword">ON</span> SCHEDULE <span class="keyword">AT</span> <span class="keyword">CURRENT_TIMESTAMP</span>+<span class="built_in">INTERVAL</span> <span class="number">5</span> <span class="keyword">DAY</span></span><br><span class="line"><span class="keyword">DO</span> <span class="keyword">TRUNCATE</span> <span class="keyword">TABLE</span> <span class="keyword">test</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>2020年1月11日06点整清空test表：</p>
+  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">EVENT</span> e_test1</span><br><span class="line"><span class="keyword">ON</span> SCHEDULE <span class="keyword">AT</span> <span class="built_in">TIMESTAMP</span><span class="string">'2020-01-01 06:00:00'</span></span><br><span class="line"><span class="keyword">DO</span> <span class="keyword">TRUNCATE</span> <span class="keyword">TABLE</span> <span class="keyword">test</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>每天定时清空test表：</p>
+  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">EVENT</span> e_test2</span><br><span class="line"><span class="keyword">ON</span> SCHEDULE EVERY <span class="number">1</span> <span class="keyword">DAY</span></span><br><span class="line"><span class="keyword">DO</span> <span class="keyword">TRUNCATE</span> <span class="keyword">test</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>5天后开启每天定时清空test表：</p>
+  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">EVENT</span> e_test3</span><br><span class="line"><span class="keyword">ON</span> SCHEDULE EVERY <span class="number">1</span> <span class="keyword">DAY</span></span><br><span class="line">STARTS <span class="keyword">CURRENT_TIMESTAMP</span>+<span class="built_in">INTERVAL</span> <span class="number">5</span> <span class="keyword">DAY</span></span><br><span class="line"><span class="keyword">DO</span> <span class="keyword">TRUNCATE</span> <span class="keyword">test</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>每天定时清空test表，5天后停止执行：</p>
+  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">EVENT</span> e_test4</span><br><span class="line"><span class="keyword">ON</span> SCHEDULE EVERY <span class="number">1</span> <span class="keyword">DAY</span></span><br><span class="line">ENDS <span class="keyword">CURRENT_TIMESTAMP</span>+<span class="built_in">INTERVAL</span> <span class="number">5</span> <span class="keyword">DAY</span></span><br><span class="line"><span class="keyword">DO</span> <span class="keyword">TRUNCATE</span> <span class="keyword">test</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>5天后开启每天定时清空test表，一个月后停止执行：</p>
+  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">EVENT</span> e_test5</span><br><span class="line"><span class="keyword">ON</span> SCHEDULE EVERY <span class="number">1</span> <span class="keyword">DAY</span></span><br><span class="line">STARTS <span class="keyword">CURRENT_TIMESTAMP</span>+<span class="built_in">INTERVAL</span> <span class="number">5</span> <span class="keyword">DAY</span></span><br><span class="line">ENDS <span class="keyword">CURRENT_TIMESTAMP</span>+<span class="built_in">INTERVAL</span> <span class="number">1</span> <span class="keyword">MONTH</span></span><br><span class="line"><span class="keyword">DO</span> <span class="keyword">TRUNCATE</span> <span class="keyword">test</span>;</span><br></pre></td></tr></table></figure>
+
+</li>
 </ul>
-<h4 id="All"><a href="#All" class="headerlink" title="All"></a>All</h4><p>Lombok虽然有很多优点，但Lombok更类似于一种IDE插件，项目也需要依赖相应的jar包。Lombok依赖jar包是因为编译时要用它的注解，为什么说它又类似插件？因为在使用时，eclipse或IntelliJ IDEA都需要安装相应的插件，在编译器编译时通过操作AST（抽象语法树）改变字节码生成，变向的就是说它在改变java语法。它不像spring的依赖注入或者mybatis的ORM一样是运行时的特性，而是编译时的特性。这里我个人最感觉不爽的地方就是对插件的依赖！因为Lombok只是省去了一些人工生成代码的麻烦，但IDE都有快捷键来协助生成getter/setter等方法，也非常方便。</p>
-<p>知乎上有位大神发表过对Lombok的一些看法：</p>
-<blockquote>
-<p>这是一种低级趣味的插件，不建议使用。JAVA发展到今天，各种插件层出不穷，如何甄别各种插件的优劣？能从架构上优化你的设计的，能提高应用程序性能的 ，<br>实现高度封装可扩展的…， 像lombok这种，像这种插件，已经不仅仅是插件了，改变了你如何编写源码，事实上，少去了代码你写上去又如何？<br>如果JAVA家族到处充斥这样的东西，那只不过是一坨披着金属颜色的屎，迟早会被其它的语言取代。   </p>
-</blockquote>
-<p>虽然话糙但理确实不糙，试想一个项目有非常多类似Lombok这样的插件，个人觉得真的会极大的降低阅读源代码的舒适度。   </p>
-<p>虽然非常不建议在属性的getter/setter写一些业务代码，但在多年项目的实战中，有时通过给getter/setter加一点点业务代码，能极大的简化某些业务场景的代码。所谓取舍，也许就是这时的舍弃一定的规范，取得极大的方便。</p>
-<p>我现在非常坚信一条理念，任何编程语言或插件，都仅仅只是工具而已，即使工具再强大也在于用的人，就如同小米加步枪照样能赢飞机大炮的道理一样。结合具体业务场景和项目实际情况，无需一味追求高大上的技术，适合的才是王道。</p>
-<p>Lombok有它的得天独厚的优点，也有它避之不及的缺点，熟知其优缺点，在实战中灵活运用才是王道。</p>
-<p>参考：<br><a href="https://www.cnblogs.com/heyonggang/p/8638374.html" target="_blank" rel="noopener">https://www.cnblogs.com/heyonggang/p/8638374.html</a><br><a href="https://projectlombok.org/features/" target="_blank" rel="noopener">https://projectlombok.org/features/</a><br><a href="https://github.com/rzwitserloot/lombok?spm=a2c4e.11153940.blogcont59972.5.2aeb6d32hayLHv" target="_blank" rel="noopener">https://github.com/rzwitserloot/lombok?spm=a2c4e.11153940.blogcont59972.5.2aeb6d32hayLHv</a><br><a href="https://www.zhihu.com/question/42348457" target="_blank" rel="noopener">https://www.zhihu.com/question/42348457</a><br><a href="https://blog.csdn.net/ghsau/article/details/52334762" target="_blank" rel="noopener">https://blog.csdn.net/ghsau/article/details/52334762</a></p>
+<p>　　<code>[ON COMPLETION [NOT] PRESERVE]</code>可以设置这个事件是执行一次还是持久执行，默认为NOT PRESERVE。</p>
+<ul>
+<li><p>每天定时清空test表(只执行一次，任务完成后就终止该事件)：</p>
+  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">EVENT</span> e_test6<span class="string">``</span><span class="keyword">ON</span> SCHEDULE EVERY <span class="number">1</span> <span class="keyword">DAY</span><span class="string">``</span><span class="keyword">ON</span> COMPLETION <span class="keyword">NOT</span> <span class="keyword">PRESERVE</span><span class="string">``</span><span class="keyword">DO</span> <span class="keyword">TRUNCATE</span> <span class="keyword">test</span>;</span><br></pre></td></tr></table></figure>
+
+
+</li>
+</ul>
+<pre><code>`[ENABLE | DISABLE]`可以设置该事件创建后状态是否开启或关闭，默认为ENABLE。
+`[COMMENT &apos;comment&apos;]`可以给该事件加上注释。</code></pre><h2 id="修改事件"><a href="#修改事件" class="headerlink" title="修改事件"></a>修改事件</h2><p>语法：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">EVENT</span> event_name</span><br><span class="line">       [ONSCHEDULE schedule]</span><br><span class="line">       [<span class="keyword">RENAME</span> TOnew_event_name]</span><br><span class="line">       [<span class="keyword">ON</span> COMPLETION [<span class="keyword">NOT</span>] <span class="keyword">PRESERVE</span>]</span><br><span class="line">       [<span class="keyword">COMMENT</span> <span class="string">'comment'</span>]</span><br><span class="line">       [<span class="keyword">ENABLE</span> | <span class="keyword">DISABLE</span>]</span><br><span class="line">       [<span class="keyword">DO</span> sql_statement]</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>临时关闭事件</p>
+  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">EVENT</span> e_test <span class="keyword">DISABLE</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>开启事件</p>
+  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">EVENT</span> e_test <span class="keyword">ENABLE</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>将每天清空test表改为5天清空一次：</p>
+  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">EVENT</span> e_test<span class="string">``</span><span class="keyword">ON</span> SCHEDULE EVERY <span class="number">5</span> <span class="keyword">DAY</span>;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="删除事件"><a href="#删除事件" class="headerlink" title="删除事件"></a>删除事件</h2><p>语法：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DROP</span> <span class="keyword">EVENT</span> [<span class="keyword">IF</span> <span class="keyword">EXISTS</span>] event_name</span><br></pre></td></tr></table></figure>
+
+<p>例如删除前面创建的e_test事件</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DROP</span> <span class="keyword">EVENT</span> e_test;</span><br></pre></td></tr></table></figure>
+
+<p>当然前提是这个事件存在，否则会产生ERROR 1513 (HY000): Unknown event错误，因此最好加上IF EXISTS</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DROP</span> <span class="keyword">EVENT</span> <span class="keyword">IF</span> <span class="keyword">EXISTS</span> e_test;</span><br></pre></td></tr></table></figure>
+
+<p>注意：如果你将event执行了Alter event event_name disable.那么当你重新启动mysql服务<br>器后，该event将被删除（测试版本：5.1.30）</p>
+<p>备注：在event事件中：ON SCHEDULE 计划任务，有两种设定计划任务的方式：</p>
+<p>（1）AT 时间戳，用来完成单次的计划任务</p>
+<p>（2）EVERY 时间（单位）的数量实践单位[STARTS 时间戳] [ENDS时间戳]，用来完成重复的计划任务。</p>
+<p>在两种计划任务中，时间戳可以是任意的TIMESTAMP 和DATETIME 数据类型，时间戳需要大于当前时间。<br>在重复的计划任务中，时间（单位）的数量可以是任意非空（Not Null）的整数式，时间单位是关键词：YEAR，MONTH，DAY，HOUR，MINUTE 或者SECOND。<br>提示: 其他的时间单位也是合法的如：QUARTER, WEEK, YEAR_MONTH,DAY_HOUR,DAY_MINUTE,DAY_SECOND,HOUR_MINUTE,HOUR_SECOND, MINUTE_SECOND，不建议使用这些不标准的时间单位。</p>
+<p>[ON COMPLETION [NOT] PRESERVE]：ON COMPLETION参数表示”当这个事件不会再发生的时候”，即当单次计划任务执行完毕后或当重复性的计划任务执行到了ENDS阶段。而PRESERVE的作用是使事件在执行完毕后不会被Drop掉，建议使用该参数，以便于查看EVENT具体信息。</p>
+<h2 id="应用案例"><a href="#应用案例" class="headerlink" title="应用案例"></a>应用案例</h2><p>本案例是利用 event scheduler 的特性，每秒钟调用一次存储过程，用于判断 SLAVE 是否正常运行，如果发现 SLAVE 关闭了，忽略 0 次错误，然后重新启动 SLAVE。</p>
+<ol>
+<li><p>首先创建存储过程</p>
+ <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">PROCEDURE</span> Slave_Monitor()</span><br><span class="line"><span class="keyword">BEGIN</span></span><br><span class="line"><span class="keyword">SELECT</span> VARIABLE_VALUE <span class="keyword">INTO</span> @SLAVE_STATUS</span><br><span class="line"><span class="keyword">FROM</span> information_schema.GLOBAL_STATUS</span><br><span class="line"><span class="keyword">WHERE</span> VARIABLE_NAME=<span class="string">'SLAVE_RUNNING'</span>;</span><br><span class="line">IF('ON'!=@SLAVE_STATUS) THEN</span><br><span class="line"><span class="keyword">SET</span> <span class="keyword">GLOBAL</span> SQL_SLAVE_SKIP_COUNTER=<span class="number">0</span>;</span><br><span class="line">SLAVE <span class="keyword">START</span>;</span><br><span class="line"><span class="keyword">END</span> <span class="keyword">IF</span>;</span><br><span class="line"><span class="keyword">END</span>;</span><br></pre></td></tr></table></figure>
+
+<p> 由于存储过程中无法调用类似 SHOW SLAVE STATUS 这样的语句，因此无法得到确切的复制错误信息和错误代码，不能进一步的处理 SLAVE 停止的各种情况。</p>
+</li>
+<li><p>接着，创建任务</p>
+ <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">EVENT</span> <span class="keyword">IF</span> <span class="keyword">NOT</span> <span class="keyword">EXISTS</span> Slave_Monitor</span><br><span class="line"><span class="keyword">ON</span> SCHEDULE EVERY <span class="number">5</span> <span class="keyword">SECOND</span></span><br><span class="line"><span class="keyword">ON</span> COMPLETION <span class="keyword">PRESERVE</span></span><br><span class="line"><span class="keyword">DO</span></span><br><span class="line"><span class="keyword">CALL</span> Slave_Monitor();</span><br></pre></td></tr></table></figure>
+
+<p> 创建了一个任务，每 5秒钟执行一次，任务结束后依旧保留该任务，而不是删除。当然了，在本例中的任务不会结束，除非将它手动禁止了。</p>
+<p> 如果在运行中想要临时关闭一下某个任务，执行 ALTER EVENT 语句即可：</p>
+ <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">EVENT</span> Slave_Monitor <span class="keyword">ON</span> COMPLETION <span class="keyword">PRESERVE</span> <span class="keyword">DISABLE</span>; <span class="comment">-- 关闭事件</span></span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">EVENT</span> Slave_Monitor <span class="keyword">ON</span> COMPLETION <span class="keyword">PRESERVE</span> <span class="keyword">ENABLE</span>; <span class="comment">-- 开启事件</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<p>参考：</p>
+<ul>
+<li><a href="https://www.cnblogs.com/javahr/p/9664203.html" target="_blank" rel="noopener">https://www.cnblogs.com/javahr/p/9664203.html</a></li>
+<li><a href="https://www.jb51.net/article/172423.htm" target="_blank" rel="noopener">https://www.jb51.net/article/172423.htm</a></li>
+</ul>
+
       
     </div>
 
@@ -620,35 +691,28 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="\2020\02\22\用java解析皮皮虾视频实现无水印下载\" rel="bookmark">用java解析皮皮虾视频实现无水印下载</a></div>
+      <div class="popular-posts-title"><a href="\2019\12\03\一些统计需求的sql语句\" rel="bookmark">一些统计需求的sql语句</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="\2019\09\30\一小时快速撸出短网址生成项目\" rel="bookmark">一小时快速撸出一个短网址生成项目</a></div>
+      <div class="popular-posts-title"><a href="\2019\09\25\建议收藏-专业的MySQL开发规范\" rel="bookmark">建议收藏-专业的MySQL开发规范</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="\2019\09\24\maven多个子项目和父项目之间的引用问题\" rel="bookmark">maven多个子项目和父项目之间的引用问题</a></div>
+      <div class="popular-posts-title"><a href="\2019\09\04\mysql中replace-into的用法\" rel="bookmark">mysql中replace into的用法</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="\2019\09\10\quartz的cron表达式写法详解\" rel="bookmark">Quartz的cron表达式写法详解</a></div>
-      
-    </li>
-  
-    <li class="popular-posts-item">
-      
-      
-      <div class="popular-posts-title"><a href="\2019\09\06\Thymeleaf自带的时间工具类\" rel="bookmark">Thymeleaf自带的时间工具类</a></div>
+      <div class="popular-posts-title"><a href="\2019\07\29\mysql删除多余重复数据只保留一条数据\" rel="bookmark">mysql删除多余重复数据只保留一条数据</a></div>
       
     </li>
   
@@ -719,7 +783,7 @@
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
     
-    <a href="https://blog.wjup.top/2019/06/23/lombok包的介绍/" title="lombok包的介绍">https://blog.wjup.top/2019/06/23/lombok包的介绍/</a>
+    <a href="https://blog.wjup.top/2020/04/14/mysql定时任务/" title="mysql的定时任务-事件">https://blog.wjup.top/2020/04/14/mysql定时任务/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
@@ -735,7 +799,7 @@
         
         <div class="post-tags">
           
-            <a href="/tags/笔记/" rel="tag"><i class="fa fa-tag"></i> 笔记</a>
+            <a href="/tags/定时任务/" rel="tag"><i class="fa fa-tag"></i> 定时任务</a>
           
         </div>
       
@@ -748,19 +812,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/06/21/《致橡树》/" rel="next" title="《致橡树》">
-                <i class="fa fa-chevron-left"></i> 《致橡树》
-              </a>
+              <a href="/2020/04/13/浏览器野史 – UserAgent列传/" rel="next" title="<转>浏览器野史 – UserAgent列传">
+                <i class="fa fa-chevron-left"></i> <转>浏览器野史 – UserAgent列传
+              </转></a>
             
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/06/25/周末博物馆一日游/" rel="prev" title="周末博物馆一日游">
-                周末博物馆一日游 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -1077,7 +1137,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#功能介绍"><span class="nav-number">1.</span> <span class="nav-text">功能介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用方法"><span class="nav-number">2.</span> <span class="nav-text">使用方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#注解解释"><span class="nav-number">3.</span> <span class="nav-text">注解解释</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Data"><span class="nav-number">3.1.</span> <span class="nav-text">@Data</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Getter-Setter"><span class="nav-number">3.2.</span> <span class="nav-text">@Getter/@Setter</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ToString"><span class="nav-number">3.3.</span> <span class="nav-text">@ToString</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#NoArgsConstructor-RequiredArgsConstructor-AllArgsConstructor"><span class="nav-number">3.4.</span> <span class="nav-text">@NoArgsConstructor/@RequiredArgsConstructor/@AllArgsConstructor</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Accessors-chain-true"><span class="nav-number">4.</span> <span class="nav-text">@Accessors(chain = true)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-number">5.</span> <span class="nav-text">总结</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#优点"><span class="nav-number">5.1.</span> <span class="nav-text">优点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#缺点"><span class="nav-number">5.2.</span> <span class="nav-text">缺点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#All"><span class="nav-number">5.3.</span> <span class="nav-text">All</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#首先检查是否开启了定时任务"><span class="nav-number">1.</span> <span class="nav-text">首先检查是否开启了定时任务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建事件"><span class="nav-number">2.</span> <span class="nav-text">创建事件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#语法"><span class="nav-number">2.1.</span> <span class="nav-text">语法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#示例"><span class="nav-number">2.2.</span> <span class="nav-text">示例</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改事件"><span class="nav-number">3.</span> <span class="nav-text">修改事件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#删除事件"><span class="nav-number">4.</span> <span class="nav-text">删除事件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#应用案例"><span class="nav-number">5.</span> <span class="nav-text">应用案例</span></a></li></ol></div>
             
 
           </div>
