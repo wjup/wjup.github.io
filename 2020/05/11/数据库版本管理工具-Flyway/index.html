@@ -134,7 +134,7 @@
 <meta property="og:description" content="&amp;emsp;&amp;emsp;Flyway 是一款开源的数据库版本管理工具，它更倾向于规约优于配置的方式。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://blog.wjup.top/2020/05/11/数据库版本管理工具-Flyway/flyway.jpg">
-<meta property="og:updated_time" content="2020-05-11T10:41:47.297Z">
+<meta property="og:updated_time" content="2020-05-12T00:52:46.761Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据库版本管理工具-Flyway">
 <meta name="twitter:description" content="&amp;emsp;&amp;emsp;Flyway 是一款开源的数据库版本管理工具，它更倾向于规约优于配置的方式。">
@@ -490,13 +490,23 @@
                 
               
 
-              <time title="创建时间：2020-05-11 18:18:11 / 修改时间：18:41:47" itemprop="dateCreated datePublished" datetime="2020-05-11T18:18:11+08:00">2020-05-11</time>
+              <time title="创建时间：2020-05-11 18:18:11" itemprop="dateCreated datePublished" datetime="2020-05-11T18:18:11+08:00">2020-05-11</time>
             </span>
           
 
           
             
 
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-05-12 08:52:46" itemprop="dateModified" datetime="2020-05-12T08:52:46+08:00">2020-05-12</time>
+              </span>
             
           
 
@@ -578,8 +588,8 @@
 
 <h3 id="application-yml"><a href="#application-yml" class="headerlink" title="application.yml"></a>application.yml</h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line"><span class="attr">  datasource:</span></span><br><span class="line"><span class="attr">    url:</span> <span class="attr">jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&amp;characterEncoding=UTF-8&amp;allowMultiQueries=true&amp;rewriteBatchedStatements=true&amp;useSSL=false&amp;serverTimezone=GMT%2B8</span></span><br><span class="line"><span class="attr">    username:</span> <span class="string">root</span></span><br><span class="line"><span class="attr">    password:</span> <span class="number">1234</span> </span><br><span class="line"><span class="attr">  flyway:</span></span><br><span class="line"><span class="attr">    enabled:</span> <span class="literal">true</span></span><br><span class="line">    <span class="comment"># 禁止清理数据库表</span></span><br><span class="line"><span class="attr">    clean-disabled:</span> <span class="literal">true</span></span><br><span class="line">    <span class="comment"># 如果数据库不是空表，需要设置成 true，否则启动报错</span></span><br><span class="line"><span class="attr">    baseline-on-migrate:</span> <span class="literal">true</span></span><br><span class="line">    <span class="comment"># 与 baseline-on-migrate: true 搭配使用</span></span><br><span class="line"><span class="attr">    baseline-version:</span> <span class="number">0</span></span><br><span class="line"><span class="attr">    locations:</span> </span><br><span class="line"><span class="attr">      - classpath:</span> <span class="string">db/migration/mysql</span></span><br></pre></td></tr></table></figure>
 
-<p>将需数据迁移的 sql 文件放置到 db/migration/mysql 目录中，启动 Spring Boot 项目即可运行 Flyway 进行数据迁移。(此处本人测试出错，如果不信可不指定使用默认的文件夹目录)</p>
-<h3 id="创建sql文件"><a href="#创建sql文件" class="headerlink" title="创建sql文件"></a>创建sql文件</h3><p>在项目的 src/main/resources 下创建 db/migration 目录，该目录下放置需要数据迁移的sql文件。<br>数据迁移文件名称格式为：V[version]<strong>[name].sql。<br>注意：名称中[version]和[name]之间是两个下划线！例如`V1.0.0</strong>wjup_test.sql`。</p>
+<p>将需数据迁移的 sql 文件放置到 <code>db/migration/mysql</code> 目录中，启动 Spring Boot 项目即可运行 Flyway 进行数据迁移。(此处本人测试出错，如果不行，也可不指定使用默认的文件夹目录)</p>
+<h3 id="创建sql文件"><a href="#创建sql文件" class="headerlink" title="创建sql文件"></a>创建sql文件</h3><p>在项目的 src/main/resources 下创建 db/migration 目录，该目录下放置需要数据迁移的sql文件。<br>数据迁移文件名称格式为：<code>V[version]__[name].sql</code>，V大写。<br>注意：名称中[version]和[name]之间是两个下划线！例如<code>V1.0.0__wjup_test.sql</code>。</p>
 <h3 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h3><p>flyway会在项目启动时自动加载sql文件并执行。</p>
 <h3 id="注意事项："><a href="#注意事项：" class="headerlink" title="注意事项："></a>注意事项：</h3><p>如果 flyway 不是项目初期引入，而是在数据库已有表的情况下引入时必须设置 baseline-on-migrate: true，设置该配置启动项目后，flyway 就会在数据库中创建 flyway_schema_history 表，并且会往该表中插入一条 version = 1 的建表记录，如果迁移数据有 V1__ 开头的文件，扫描文件会忽略该文件不执行迁移，进而可能引发其他迁移数据出错的问题。</p>
 <h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="https://flywaydb.org/documentation/api/" target="_blank" rel="noopener">Flyway 官网</a><br><a href="https://docs.spring.io/spring-boot/docs/current/reference/html/howto-database-initialization.html#howto-execute-flyway-database-migrations-on-startup" target="_blank" rel="noopener">Spring Boot 文档</a></p>
