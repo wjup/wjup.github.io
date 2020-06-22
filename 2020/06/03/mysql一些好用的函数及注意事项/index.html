@@ -107,10 +107,15 @@
 <meta property="og:site_name" content="WJUP">
 <meta property="og:description" content="最近可谓非常忙，一个人15天负责多个大屏的输出，还是挺辛苦的。在开发过程，为了满足条件，提高效率，使用sql提供的函数，还是能节省很多java代码的。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-06-09T03:10:05.674Z">
+<meta property="og:image" content="https://blog.wjup.top/2020/06/03/mysql一些好用的函数及注意事项/test_p.png">
+<meta property="og:image" content="https://blog.wjup.top/2020/06/03/mysql一些好用的函数及注意事项/test_c.png">
+<meta property="og:image" content="https://blog.wjup.top/2020/06/03/mysql一些好用的函数及注意事项/union.png">
+<meta property="og:image" content="https://blog.wjup.top/2020/06/03/mysql一些好用的函数及注意事项/union-all.png">
+<meta property="og:updated_time" content="2020-06-22T02:10:29.705Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="mysql一些好用的函数及注意事项">
 <meta name="twitter:description" content="最近可谓非常忙，一个人15天负责多个大屏的输出，还是挺辛苦的。在开发过程，为了满足条件，提高效率，使用sql提供的函数，还是能节省很多java代码的。">
+<meta name="twitter:image" content="https://blog.wjup.top/2020/06/03/mysql一些好用的函数及注意事项/test_p.png">
 
 
 
@@ -257,7 +262,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签云<span class="badge">57</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签云<span class="badge">59</span></a>
 
   </li>
         
@@ -477,7 +482,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2020-06-09 11:10:05" itemprop="dateModified" datetime="2020-06-09T11:10:05+08:00">2020-06-09</time>
+                <time title="修改时间：2020-06-22 10:10:29" itemprop="dateModified" datetime="2020-06-22T10:10:29+08:00">2020-06-22</time>
               </span>
             
           
@@ -544,6 +549,17 @@
 </blockquote>
 <p>使用场景：查询两个相似表的数据（例如项目中有活动告警表和历史告警表，表结构一样，但存的数据性质却不一样），直接用这个函数字拼接返回一个list，比在代码中拼接list省事的多了。</p>
 <p>但是要注意还很容易被忽略的一个问题是：<strong>UNION 内部的每个 SELECT 语句必须拥有相同数量的列。列也必须拥有相似的数据类型。同时，每个 SELECT 语句中的列的顺序必须相同</strong>。该对应的对应不起来，数据就会出现偏差，比如张三年龄18，你给整成身高18，显然不合理。</p>
+<h3 id="union和union-all的区别"><a href="#union和union-all的区别" class="headerlink" title="union和union all的区别"></a><code>union</code>和<code>union all</code>的区别</h3><p>两个函数都有连接的意思，不同点在于，union连接两个sql语句时，多sql的结果相同和不同的数据只返回一次，而union all是返回前一条语句执行的所有结果加后一条语句执行的所有结果，所以返回的数据是会重复的。<br>上查询示例：<br>表结构：test_p、test_c</p>
+<img src="/2020/06/03/mysql一些好用的函数及注意事项/test_p.png" title="test_p父表">
+<img src="/2020/06/03/mysql一些好用的函数及注意事项/test_c.png" title="test_c字表">
+
+<p>union关联查询的结果</p>
+<img src="/2020/06/03/mysql一些好用的函数及注意事项/union.png" title="union函数结果">
+
+<p>union all关联查询的结果</p>
+<img src="/2020/06/03/mysql一些好用的函数及注意事项/union-all.png" title="union all函数结果">
+
+<p>这俩关键字的另一用法则可以查出多表的全集数据，和其他数据库的full join函数一样效果<br>众所周知mysql没有全连接<code>full join</code>函数的，所以想要返回两张表的所有数据，可以使用左连接加右链接然后使用union all函数关联两条sql的结果得到最终集。</p>
 <h2 id="函数字二：coalesce"><a href="#函数字二：coalesce" class="headerlink" title="函数字二：coalesce"></a>函数字二：<code>coalesce</code></h2><p>查数据这真是个常用且超级好用的函数</p>
 <blockquote>
 <p>返回参数中的第一个非空表达式（从左向右）</p>
@@ -551,7 +567,7 @@
 <p>使用场景：在查询数据返回给前端时，某一项为空就可以用它进行判断返回固定的值给前端，可以让前端友好的显示，不显示null或者报错。<br>使用示例：<code>select coalesce(cpu_num,0) from xxx</code>，这个sql的意思是查询cpu核数，为空时返回0<br>不仅可以设置返回一个默认值，也可以多个进行选择出一个不为空的，例如<code>coalesce(username,english_name,nick_name,&#39;no name&#39;)</code>：当用户名为空时，首先返回英文名，英文名也为空就返回昵称，昵称也为空则就显示no name了</p>
 <p>这个函数和<code>ifnull</code>差不多，但是<code>ifnull</code>只能返回一个默认值。例：<strong>ifnull(age,0)</strong></p>
 <hr>
-<p>下班回家，看心情再更新…</p>
+<p>不定期持续更新…</p>
 
       
     </div>
@@ -976,6 +992,10 @@
                     
                       
                     
+                      
+                    
+                      
+                    
                     <span class="site-state-item-count">57</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
@@ -1054,7 +1074,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#函数字一：union"><span class="nav-number">1.</span> <span class="nav-text">函数字一：union</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#函数字二：coalesce"><span class="nav-number">2.</span> <span class="nav-text">函数字二：coalesce</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#函数字一：union"><span class="nav-number">1.</span> <span class="nav-text">函数字一：union</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#union和union-all的区别"><span class="nav-number">1.1.</span> <span class="nav-text">union和union all的区别</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#函数字二：coalesce"><span class="nav-number">2.</span> <span class="nav-text">函数字二：coalesce</span></a></li></ol></div>
             
 
           </div>
