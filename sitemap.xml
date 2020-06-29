@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.wjup.top/2019/07/02/%E7%A7%98%E5%AF%86%E8%8A%B1%E5%9B%AD/</loc>
+    
+    <lastmod>2020-06-29T01:35:51.003Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.wjup.top/2020/06/03/mysql%E4%B8%80%E4%BA%9B%E5%A5%BD%E7%94%A8%E7%9A%84%E5%87%BD%E6%95%B0%E5%8F%8A%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/</loc>
     
     <lastmod>2020-06-22T02:10:29.705Z</lastmod>
@@ -40,13 +47,6 @@
     <loc>https://blog.wjup.top/2020/05/11/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7-Flyway/</loc>
     
     <lastmod>2020-05-12T00:52:46.761Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.wjup.top/2019/07/02/%E7%A7%98%E5%AF%86%E8%8A%B1%E5%9B%AD/</loc>
-    
-    <lastmod>2020-04-24T07:12:07.097Z</lastmod>
     
   </url>
   
