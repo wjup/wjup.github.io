@@ -109,10 +109,11 @@
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://blog.wjup.top/2020/09/16/nginx反向代理简单实现/nginx_proxy.png">
 <meta property="og:image" content="https://blog.wjup.top/2020/09/16/nginx反向代理简单实现/nginx_status.png">
+<meta property="og:image" content="https://blog.wjup.top/2020/09/16/nginx反向代理简单实现/windows_host.png">
 <meta property="og:image" content="https://blog.wjup.top/2020/09/16/nginx反向代理简单实现/springboot.png">
 <meta property="og:image" content="https://blog.wjup.top/2020/09/16/nginx反向代理简单实现/ip_port.png">
 <meta property="og:image" content="https://blog.wjup.top/2020/09/16/nginx反向代理简单实现/domain.png">
-<meta property="og:updated_time" content="2020-09-16T11:41:44.804Z">
+<meta property="og:updated_time" content="2020-09-16T11:47:50.388Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="nginx反向代理简单实现">
 <meta name="twitter:description" content="前言上周拼着拼着单词，无意发现一个挺顺的5个字母的词组。不过到现在也没想到有啥寓意，但是看着就是挺顺，而且com域名没被注册，于是我就当仁不让的注册了下来，不为别的，就是因为看着顺。 域名是啥呢？当当当，wiung.com。 想了想自己还剩两年多的服务器不能绑定自己的域名就心痛，于是周末再次尝试能不能备案，记得上次备案wjup.top这个域名时，阿里云那边总是提示我身份证和人脸识别不匹配，问客服说">
@@ -468,7 +469,7 @@
                 
               
 
-              <time title="创建时间：2020-09-16 19:33:47 / 修改时间：19:41:44" itemprop="dateCreated datePublished" datetime="2020-09-16T19:33:47+08:00">2020-09-16</time>
+              <time title="创建时间：2020-09-16 19:33:47 / 修改时间：19:47:50" itemprop="dateCreated datePublished" datetime="2020-09-16T19:33:47+08:00">2020-09-16</time>
             </span>
           
 
@@ -547,7 +548,7 @@
 
 <p>然后<code>ip addr</code>查看虚拟机的ip，在浏览器打开看看是否能访问nginx默认页面。如果访问没反应，<code>systemctl status firewalld</code>检查防火墙是否未关闭，然后<code>systemctl stop firewalld</code>关闭即可。</p>
 <h3 id="修改hosts"><a href="#修改hosts" class="headerlink" title="修改hosts"></a>修改hosts</h3><p>ok，启动成功后，修改windows的host文件，随便写几个域名，然后ip写虚拟机的ip。这里在浏览器访问写的域名，就会解析到后面的ip上，所以域名不要写一些常用的域名，避免忘记更改，不能正常访问。我这里写的是我申请的域名后面加了一个v(virtual)</p>
-
+<img src="/2020/09/16/nginx反向代理简单实现/windows_host.png" title="hosts文件">
 
 <p>写好后由于虚拟机上的nginx配置文件没更改，访问这几个域名应该是nginx的默认页面，</p>
 
