@@ -112,7 +112,7 @@
 <meta property="og:image" content="https://blog.wjup.top/2021/01/09/服务器部署前后端分离项目并利用nginx绑定域名/index.png">
 <meta property="og:image" content="https://blog.wjup.top/2021/01/09/服务器部署前后端分离项目并利用nginx绑定域名/login.png">
 <meta property="og:image" content="https://blog.wjup.top/2021/01/09/服务器部署前后端分离项目并利用nginx绑定域名/retrievePwd.png">
-<meta property="og:updated_time" content="2021-01-09T13:51:30.566Z">
+<meta property="og:updated_time" content="2021-01-09T14:11:37.065Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="服务器部署前后端分离项目并利用nginx绑定域名">
 <meta name="twitter:description" content="说来惭愧，许久未更新文章了。想着买来的服务器和域名不能浪费，今天就利用这俩水篇文章吧，正好也记录下我的vue开篇之路。">
@@ -468,7 +468,7 @@
                 
               
 
-              <time title="创建时间：2021-01-09 20:11:00 / 修改时间：21:51:30" itemprop="dateCreated datePublished" datetime="2021-01-09T20:11:00+08:00">2021-01-09</time>
+              <time title="创建时间：2021-01-09 20:11:00 / 修改时间：22:11:37" itemprop="dateCreated datePublished" datetime="2021-01-09T20:11:00+08:00">2021-01-09</time>
             </span>
           
 
@@ -547,7 +547,7 @@
 <h2 id="域名解析"><a href="#域名解析" class="headerlink" title="域名解析"></a>域名解析</h2><p>我的域名是阿里云注册的，前几个月正好也备案通过了。绑定域名也是非常简单方便的。</p>
 <img src="/2021/01/09/服务器部署前后端分离项目并利用nginx绑定域名/dns.png" title="域名解析">
 <p>之前的文章：<a href="http://blog.wjup.top/2020/09/16/nginx%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0/">nginx反向代理简单实现</a>也介绍过。简单来说就是不同的二级域名解析到相同的服务器ip地址上。然后利用nginx的反向代理原理，根据不用的二级域名在服务器内部进行转发到不同的资源上。</p>
-<h2 id="配置nginx"><a href="#配置nginx" class="headerlink" title="配置nginx"></a>配置nginx</h2><p>打好包后上传到服务器中，我一般在<code>/opt</code>目录下新建文件夹上传进去。这里我在<code>/opt</code>目录下新建了两个文件夹<code>web</code>和<code>server</code>，分别用来存放前端页面和后端服务。上传好后可编辑nginx配置。</p>
+<h2 id="配置nginx"><a href="#配置nginx" class="headerlink" title="配置nginx"></a>配置nginx</h2><p>打好包后上传到服务器中，我一般在<code>/opt</code>目录下新建文件夹上传进去。这里我在<code>/opt</code>目录下新建了<code>we</code>文件夹，然后建了两个子文件夹<code>web</code>和<code>server</code>，分别用来存放前端页面和后端服务。上传好后可编辑nginx配置。</p>
 <img src="/2021/01/09/服务器部署前后端分离项目并利用nginx绑定域名/nginx.png" title="nginx配置文件">
 
 <p>图中标记的地方就是解决刷新空白问题。<br>通过图中还可以看到前端的静态页面是直接指向资源路径的，而接口服务是代理转发到接口服务地址上的。<br>配置好nginx后可以用命令<code>./nginx -t</code>测试一下配置文件的正确性。没有错误，重启<code>./nginx -s reload</code>一下nginx就可以了。</p>
@@ -560,6 +560,7 @@
 <img src="/2021/01/09/服务器部署前后端分离项目并利用nginx绑定域名/retrievePwd.png" title="找回密码页">
 
 <p>ok！以上就是这篇文章的全部内容，如果你喜欢的话，别忘了动动小手点击下面的<strong>打赏</strong>按钮，打开微信/支付宝，请我吃根辣条吧。</p>
+<p>下期预告，2020已悄然逝去，往年总结惯例不能丢。<strong>我的年终总结之????的2020</strong>即将发布。</p>
 
       
     </div>
